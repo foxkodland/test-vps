@@ -13,6 +13,7 @@ cd test-vps
 python3 -m venv my_venv
 source ./my_venv/bin/activate
 pip install -r requirements.txt
+deactivate
 
 sudo cp test_service.service /lib/systemd/system/
 sudo systemctl daemon-reload 
