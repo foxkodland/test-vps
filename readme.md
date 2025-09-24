@@ -14,5 +14,10 @@ python3 -m venv my_venv
 source ./my_venv/bin/activate
 pip install -r requirements.txt
 
-python main.py
+sudo cp test_service.service /lib/systemd/system/
+sudo systemctl daemon-reload 
+sudo systemctl enable test_service.service
+sudo systemctl start test_service.service
+
+echo "Все готово, можно пробовать 8000 порт"
 ```
