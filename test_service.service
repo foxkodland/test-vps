@@ -9,7 +9,7 @@ RestartSec=3
 User=root
 # EnvironmentFile=/etc/myapp/.env
 WorkingDirectory=/home/test-vps
-ExecStart=/home/test-vps/my_venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+ExecStart=/home/test-vps/my_venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000 --log-level debug
 
 [Install]
 WantedBy=multi-user.target
