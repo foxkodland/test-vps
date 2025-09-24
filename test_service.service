@@ -1,0 +1,15 @@
+[Unit]
+Description=Bot Service
+After=network.target
+
+[Service]
+Type=idle
+Restart=always
+RestartSec=3
+User=root
+# EnvironmentFile=/etc/myapp/.env
+WorkingDirectory=/home/test-vps
+ExecStart=/home/test-vps/my_venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+
+[Install]
+WantedBy=multi-user.target
