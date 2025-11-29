@@ -2,7 +2,6 @@
 ```
 sudo apt update
 sudo apt -y upgrade
-apt install unzip	
 sudo apt install -y python3-venv
 sudo apt install -y git
 
