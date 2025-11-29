@@ -19,5 +19,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable test_service.service
 sudo systemctl start test_service.service
 
-echo "Все готово, можно пробовать 8000 порт"
+echo "Все готово, можно пробовать $(hostname -I | awk '{print $1}'):8000"
 ```
