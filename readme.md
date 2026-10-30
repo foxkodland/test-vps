@@ -21,3 +21,14 @@ sudo systemctl start test_service.service
 
 echo "Все готово, можно пробовать $(hostname -I | awk '{print $1}'):8000"
 ```
+Удалить тестовый бэкенд
+```
+sudo systemctl stop test_service.service
+sudo systemctl disable test_service.service
+sudo rm /lib/systemd/system/test_service.service
+sudo systemctl daemon-reload
+sudo systemctl reset-failed
+
+cd /home
+rm -rf test-vps
+```
